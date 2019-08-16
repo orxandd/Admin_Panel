@@ -16,7 +16,7 @@
              $this->load->model("Login_model");
 
              if (!$this->session->userdata("session")){
-                 redirect(base_url("utech_admin_panel_login_page"));
+                 redirect(base_url("secure_admin_panel_login_page"));
              }
 
          }
@@ -45,7 +45,7 @@
                 $this->session->set_flashdata("alert_danger", "Boşluq Buraxmayın!");
             }
 
-             redirect(base_url("utech_admin_panel_admin_update"));
+             redirect(base_url("secure_admin_panel_admin_update"));
 
 
          }

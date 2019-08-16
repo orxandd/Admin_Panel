@@ -19,8 +19,8 @@
     <th style="width:6%; vertical-align: middle" class="text-center">Yüklənmə Tarixi</th>
     <th style="width:8%; vertical-align: middle" class="text-center">
 
-        <button data-url="<?php echo base_url("secure_admin_panel_portfolio_gallery_delete_group/$portfolio[id]")?>"
-                data-url2="<?php echo base_url("secure_admin_panel_portfolio_gallery_delete_all/$portfolio[id]")?>"
+        <button data-url="<?php echo base_url("secure_admin_panel_portfolio_gallery_delete_group_woc/$portfolio[id]")?>"
+                data-url2="<?php echo base_url("secure_admin_panel_portfolio_gallery_delete_all_woc/$portfolio[id]")?>"
                 class="btn btn-danger c_all_delete_portfolio"
                 title="Seçilən elementləri sil">
             <i class="fa fa-trash"></i>
@@ -53,7 +53,7 @@
                 <input type="checkbox"
                        class="js-switch isPrimary"
                        data-switchery
-                        data-url="<?php echo base_url("secure_admin_panel_portfolio_gallery_primary/$portfolio[id]/$item[id]")?>"
+                        data-url="<?php echo base_url("secure_admin_panel_portfolio_gallery_primary_woc/$portfolio[id]/$item[id]")?>"
                         <?php if ($item["is_primary"] == 1){
                             echo "checked";
                         } ?>
@@ -64,7 +64,7 @@
                 <?php echo $item["upload_date"]?>
             </td>
             <td class="v-align-middle c_vertical_align_middle text-center">
-                <button data-url="<?php echo base_url("secure_admin_panel_portfolio_gallery_delete/$portfolio[id]/$item[id]")?>" class="btn btn-danger c_delete_portfolio_category">
+                <button data-url="<?php echo base_url("secure_admin_panel_portfolio_gallery_delete_woc/$portfolio[id]/$item[id]")?>" class="btn btn-danger c_delete_portfolio_category">
                     <i class="fa fa-trash"></i>
                     Sil
                 </button>

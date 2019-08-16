@@ -16,20 +16,9 @@
                     <div class="grid-body no-border c_grid_padding">
                         <div class="row">
 
-                            <form action="<?php echo base_url("secure_admin_panel_portfolio_add_act")?>" method="post">
+                            <form action="<?php echo base_url("secure_admin_panel_portfolio_add_act_woc")?>" method="post">
                                 <label for="name">Portfolionun Adı</label>
                                 <input id="name" type="text" class="form-control" name="name">
-                                <br>
-
-
-                                <label>Portfolionun Kateqoriyası</label>
-                                <select name="category" class="form-control">
-                                    <?php foreach ($categories as $item) {?>
-                                        <option>
-                                            <?php echo $item["name"];?>
-                                        </option>
-                                    <?php }?>
-                                </select>
                                 <br><br>
 
 

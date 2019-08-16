@@ -17,7 +17,7 @@
                                         <div data-height="220px" class="c_portfolio_btn_div">
                                             <h1>Portfolio Kateqoriyaları</h1>
                                             <br>
-                                            <a href="<?php echo base_url("utech_admin_panel_portfolio_category")?>" class="btn btn-primary c_portfolio_btn">Get</a>
+                                            <a href="<?php echo base_url("secure_admin_panel_portfolio_category")?>" class="btn btn-primary c_portfolio_btn">Get</a>
                                         </div>
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@
                                         <div data-height="220px" class="c_portfolio_btn_div">
                                             <h1>Portfolioların Listi</h1>
                                             <br>
-                                            <a href="<?php echo base_url("utech_admin_panel_portfolio_list")?>" class="btn btn-primary c_portfolio_btn">Get</a>
+                                            <a href="<?php echo base_url("secure_admin_panel_portfolio_list")?>" class="btn btn-primary c_portfolio_btn">Get</a>
                                         </div>
                                     </div>
                                 </div>
