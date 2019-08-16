@@ -241,7 +241,7 @@ $route['secure_admin_panel_portfolio_gallery_delete_group_woc/(.*)'] = 'Panel_ad
 //portfolio qalereya hamsin silme
 $route['secure_admin_panel_portfolio_gallery_delete_all_woc/(.*)'] = 'Panel_admin_page_portfolio_woc/prtfolio_gallery_delete_all/$1';
 
-//----------------------------- (Kateqoriyasi olan tek dilli  portfolio hissesinin linkleri) portfoliolarin qalereyasi hissesi---------------------------------------------------------------
+//----------------------------- (Kateqoriyasi olmayan tek dilli  portfolio hissesinin linkleri) portfoliolarin qalereyasi hissesi---------------------------------------------------------------
 
 
 
@@ -303,5 +303,13 @@ $route['secure_admin_panel_portfolio_gallery_delete_group_woc_ml/(.*)'] = 'Panel
 //portfolio qalereya hamsin silme
 $route['secure_admin_panel_portfolio_gallery_delete_all_woc_ml/(.*)'] = 'Panel_admin_page_portfolio_woc_ml/prtfolio_gallery_delete_all/$1';
 
-//----------------------------- (Kateqoriyasi olan 3 dilli  portfolio hissesinin linkleri) portfoliolarin qalereyasi hissesi---------------------------------------------------------------
+//----------------------------- (Kateqoriyasi olmayan 3 dilli  portfolio hissesinin linkleri) portfoliolarin qalereyasi hissesi---------------------------------------------------------------
+
+
+
+
+
+
+
+
 

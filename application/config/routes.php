@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -51,14 +52,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 //===================================Admin Panel linkleri===================
+
+
 //---------------------------------admin yenileme hissesi-----------------------------
+
 $route['secure_admin_panel_admin_update'] = 'Panel_admin_page_admin';
+
 $route['secure_admin_panel_admin_update_act'] = 'Panel_admin_page_admin/admin_update';
+
 //---------------------------------admin yenileme hissesi-----------------------------
+
+
+
+
 //---------------------------------Login hissesi-----------------------------
+
 $route['secure_admin_panel_login_page'] = 'Panel_admin_page_login';
+
 $route['secure_admin_panel_login_page_act'] = 'Panel_admin_page_login/login_act';
+
 $route['secure_admin_panel_login_page_logout'] = 'Panel_admin_page_login/logout';
+
+
 //---------------------------------Login hissesi-----------------------------
 //===================================Admin Panel linkleri===================
+
+
+
+
+
