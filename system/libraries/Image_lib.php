@@ -395,7 +395,7 @@ class CI_Image_lib {
 		/**
 		 * A work-around for some improperly formatted, but
 		 * usable JPEGs; known to be produced by Samsung
-		 * smartphones' front-facing cameras.
+		 * smartphones' frontend-facing cameras.
 		 *
 		 * @see	https://github.com/bcit-ci/CodeIgniter/issues/4967
 		 * @see	https://bugs.php.net/bug.php?id=72404
