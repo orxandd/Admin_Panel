@@ -39,12 +39,12 @@
 
             <div class="user-info-wrapper sm">
                 <div class="profile-wrapper sm">
-                    <img src="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.jpg" alt="" data-src="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.jpg" data-src-retina="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar2x.jpg" width="69" height="69" />
-                    <div class="availability-bubble online"></div>
+                    <img src="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.png" alt="" data-src="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.png" data-src-retina="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.png" width="69" height="69" />
                 </div>
                 <div class="user-info sm">
-                    <div class="username">Fred <span class="semi-bold">Smith</span></div>
-                    <div class="status">Life goes on...</div>
+                    <div class="username" style="margin-top: 12px;">Admin
+                        <a href="<?php echo base_url("utech_admin_panel_login_page_logout")?>" title="Çıxış" class="fa fa-sign-out c_cursor_pointer" style="margin-left: 10px"></a>
+                    </div>
                 </div>
             </div>
 
@@ -60,16 +60,6 @@
 
 
             <ul>
-                <li class="start  open active ">
-                    <a href="#">
-                        <i class="material-icons">home</i>
-
-<!--                        Ana sehife-->
-                        <span class="title">Dashboard</span>
-
-                        <span class="selected"></span>
-                    </a>
-                </li>
 
                 <li class="start  open active ">
                     <a href="<?php echo base_url("utech_admin_panel_portfolio")?>">
@@ -82,10 +72,20 @@
                     </a>
                 </li>
 
+
+
+
+
                 <li class="open active">
-                    <a href="<?php echo base_url("utech_admin_panel_message")?>"> <i class="material-icons">email</i> <span class="title">Mesajlar</span> <span class=" badge badge-disable pull-right "></span>
+                    <a href="<?php echo base_url("utech_admin_panel_admin_update")?>">
+                        <i class="material-icons">update</i>
+                        <span class="title">Admin Yeniləməsi</span>
+                        <span class=" badge badge-disable pull-right "></span>
                     </a>
                 </li>
+
+
+
             </ul>
 
 

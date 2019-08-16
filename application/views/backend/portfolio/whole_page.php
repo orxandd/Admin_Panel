@@ -49,3 +49,15 @@
 
 
 <?php $this->load->view("backend/includes_for_whole/footer");?>
+
+<!--melumat alerti-->
+<?php if($this->session->flashdata("alert")){ ?>
+    <script>
+        iziToast.success({
+            icon: 'icon-person',
+            message: '<?php echo $this->session->flashdata("alert")?>',
+            position: 'topCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+            // progressBarColor: 'rgb(0, 255, 184)',
+        });
+    </script>
+<?php }?>

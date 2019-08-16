@@ -1,4 +1,4 @@
- <?php
+<?php
  class Portfolio_model extends CI_Model {
 
      public function __construct()
@@ -23,8 +23,9 @@
          $this->db->where($where)->update("portfolio_category", $data);
      }
 
-     public function portfolio_category_delete($where){
-         $this->db->where($where)->delete("portfolio_category");
+     public function portfolio_category_delete($where1, $where2){
+         $this->db->where($where1)->delete("portfolio_category");
+         $this->db->where($where2)->delete("portfolio");
      }
 //     portfolio kateqoriya hissesi
 
@@ -33,6 +34,10 @@
 //     portfolio listinin hissesi
      public function get_portfolio_list(){
          return $this->db->order_by("id", "DESC")->get("portfolio")->result_array();
+     }
+
+     public function get_portfolio_list_e($name){
+         return $this->db->where('category_name',$name)->order_by("id", "DESC")->get("portfolio")->result_array();
      }
 
      public function get_portfolio_list_single($where){
@@ -49,6 +54,7 @@
 
      public function portfolio_list_delete($where){
          $this->db->where($where)->delete("portfolio");
+         $this->db->where("portfolio_id", $where["id"])->delete("portfolio_gallery");
      }
 //     portfolio listinin hissesi
 

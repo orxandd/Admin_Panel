@@ -56,6 +56,30 @@ $route['translate_uri_dashes'] = FALSE;
 //===================================Admin Panel linkleri===================
 
 
+//---------------------------------admin yenileme hissesi-----------------------------
+
+$route['utech_admin_panel_admin_update'] = 'Panel_admin_page_admin';
+
+$route['utech_admin_panel_admin_update_act'] = 'Panel_admin_page_admin/admin_update';
+
+//---------------------------------admin yenileme hissesi-----------------------------
+
+
+
+
+//---------------------------------Login hissesi-----------------------------
+
+$route['utech_admin_panel_login_page'] = 'Panel_admin_page_login';
+
+$route['utech_admin_panel_login_page_act'] = 'Panel_admin_page_login/login_act';
+
+$route['utech_admin_panel_login_page_logout'] = 'Panel_admin_page_login/logout';
+
+
+//---------------------------------Login hissesi-----------------------------
+
+
+
 //portfolio hissesi
 $route['utech_admin_panel_portfolio'] = 'Panel_admin_page_portfolio';
 
@@ -153,7 +177,47 @@ $route['utech_admin_panel_message_single/(:any)'] = 'Panel_admin_page_contact/si
 
 
 
+
+//-------------------------------Servis Hissesi-------------------
+
+$route['utech_admin_panel_services'] = 'Panel_admin_page_services/index';
+$route['utech_admin_panel_services_elave_et'] = 'Panel_admin_page_services/AddService';
+$route['utech_admin_panel_services_elave_etme'] = 'Panel_admin_page_services/AddServiceAct';
+$route['utech_admin_panel_services_yenile/(.*)'] = 'Panel_admin_page_services/UpdateService/$1';
+$route['utech_admin_panel_services_yenileme/(.*)'] = 'Panel_admin_page_services/UpdateServiceAct/$1';
+$route['utech_admin_panel_services_sil/(.*)'] = 'Panel_admin_page_services/DeleteService/$1';
+
+//-------------------------------Servis Hissesi-------------------
+
+
+//-------------------------------emekdasliq Hissesi-------------------
+
+
+$route['utech_admin_panel_partners'] = 'Panel_admin_page_partners/index';
+$route['utech_admin_panel_partners_add'] = 'Panel_admin_page_partners/partners_add';
+$route['utech_admin_panel_partners_add_act'] = 'Panel_admin_page_partners/partners_add_act';
+$route['utech_admin_panel_partners_update/(.*)'] = 'Panel_admin_page_partners/partners_update/$1';
+$route['utech_admin_panel_partners_update_act/(.*)'] = 'Panel_admin_page_partners/partners_update_act/$1';
+$route['utech_admin_panel_partners_delete/(.*)'] = 'Panel_admin_page_partners/partners_delete/$1';
+
+
+//-------------------------------emekdasliq Hissesi-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //===================================Admin Panel linkleri===================
+
 
 
 
@@ -166,6 +230,7 @@ $route['utech_admin_panel_message_single/(:any)'] = 'Panel_admin_page_contact/si
 
 //about hissesi
 $route['about'] = 'About/index';
+$route['why_us'] = 'Why_us/index';
 
 
 //portfolio hissesi
