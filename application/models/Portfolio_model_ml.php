@@ -1,0 +1,91 @@
+<?php
+ class Portfolio_model_ml extends CI_Model {
+
+     public function __construct()
+     {
+         parent::__construct();
+     }
+
+//     portfolio kateqoriya hissesi
+     public function get_portfolio_category(){
+         return $this->db->order_by("id", "DESC")->get("portfolio_category_ml")->result_array();
+     }
+
+     public function get_portfolio_category_single($where){
+         return $this->db->where($where)->get("portfolio_category_ml")->row_array();
+     }
+
+     public function portfolio_category_add($data){
+         $this->db->insert("portfolio_category_ml", $data);
+    }
+
+     public function portfolio_category_update($where, $data){
+         $this->db->where($where)->update("portfolio_category_ml", $data);
+     }
+
+     public function portfolio_category_delete($where1, $where2){
+         $this->db->where($where1)->delete("portfolio_category_ml");
+         $this->db->where($where2)->delete("portfolio_ml");
+     }
+//     portfolio kateqoriya hissesi
+
+
+
+//     portfolio listinin hissesi
+     public function get_portfolio_list(){
+         return $this->db->order_by("id", "DESC")->get("portfolio_ml")->result_array();
+     }
+
+     public function get_portfolio_list_e($name){
+         return $this->db->where('category_name',$name)->order_by("id", "DESC")->get("portfolio_ml")->result_array();
+     }
+
+     public function get_portfolio_list_single($where){
+         return $this->db->where($where)->get("portfolio_ml")->row_array();
+     }
+
+     public function portfolio_list_add($data){
+         $this->db->insert("portfolio_ml", $data);
+     }
+
+     public function portfolio_list_update($where, $data){
+         $this->db->where($where)->update("portfolio_ml", $data);
+     }
+
+     public function portfolio_list_delete($where){
+         $this->db->where($where)->delete("portfolio_ml");
+         $this->db->where("portfolio_id", $where["id"])->delete("portfolio_gallery");
+     }
+//     portfolio listinin hissesi
+
+
+
+
+//     portfolio qalereya hissesi
+     public function get_gellery_list(){
+         return $this->db->where("is_primary", 1)->order_by("portfolio_id", "DESC")->get("portfolio_gallery")->result_array();
+     }
+
+     public function get_portfolio_gallery($where){
+         return $this->db->where($where)->order_by("id", "DESC")->get("portfolio_gallery")->result_array();
+     }
+
+     public function portfolio_gallery_add($data){
+         $this->db->insert("portfolio_gallery", $data);
+     }
+
+     public function portfolio_gallery_delete($where){
+        return $this->db->where($where)->delete("portfolio_gallery");
+     }
+
+     public function portfolio_gallery_update($where, $data){
+         $this->db->where($where)->update("portfolio_gallery", $data);
+     }
+
+     public function portfolio_gallery_update_old_category_in_portfolio_list($where, $data){
+         $this->db->where($where)->update("portfolio_ml", $data);
+     }
+//     portfolio qalereya hissesi
+
+
+ }

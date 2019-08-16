@@ -74,6 +74,18 @@
 
 
                 <li class="start  open active ">
+                    <a href="<?php echo base_url("secure_admin_panel_portfolio_ml")?>">
+                        <i class="material-icons">web</i>
+
+                        <!--                        Portfel-->
+                        <span class="title">Portfel (Kateqoriyali 3 Dilli)</span>
+
+                        <span class="selected"></span>
+                    </a>
+                </li>
+
+
+                <li class="start  open active ">
                     <a href="<?php echo base_url("secure_admin_panel_portfolio_list_woc")?>">
                         <i class="material-icons">web</i>
 
@@ -85,6 +97,17 @@
                 </li>
 
 
+
+                <li class="start  open active ">
+                    <a href="<?php echo base_url("secure_admin_panel_portfolio_list_woc_ml")?>">
+                        <i class="material-icons">web</i>
+
+                        <!--                        Portfel-->
+                        <span class="title">Portfel (Kateqoriyasiz 3 Dilli)</span>
+
+                        <span class="selected"></span>
+                    </a>
+                </li>
 
 
 
