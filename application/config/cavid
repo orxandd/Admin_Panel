@@ -313,3 +313,31 @@ $route['secure_admin_panel_portfolio_gallery_delete_all_woc_ml/(.*)'] = 'Panel_a
 
 
 
+//----------------------------- Gallery hissesi---------------------------------------------------------------
+
+// qalereya
+$route['secure_admin_panel_gallery'] = 'Panel_admin_page_gallery/gallery';
+
+
+// qalereya elave etme
+$route['secure_admin_panel_gallery_add'] = 'Panel_admin_page_gallery/gallery_add';
+
+// qalereya silme
+$route['secure_admin_panel_gallery_delete/(.*)'] = 'Panel_admin_page_gallery/gallery_delete/$1';
+
+// qalereya refresh list
+$route['secure_admin_panel_gallery_refresh'] = 'Panel_admin_page_gallery/refresh_image_list_gallery';
+
+// qalereya secilen sekilleri silme
+$route['secure_admin_panel_gallery_delete_group'] = 'Panel_admin_page_gallery/gallery_delete_group';
+
+// qalereya hamsin silme
+$route['secure_admin_panel_gallery_delete_all'] = 'Panel_admin_page_gallery/gallery_delete_all';
+
+//----------------------------- Gallery hissesi---------------------------------------------------------------
+
+
+
+
+
+
