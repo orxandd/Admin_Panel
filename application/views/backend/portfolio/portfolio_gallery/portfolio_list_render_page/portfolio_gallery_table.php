@@ -1,4 +1,5 @@
 <?php if (!empty($gallery)){?>
+
 <!--                            portfoliolarin listi-->
 <table class="table no-more-tables table-bordered">
 
@@ -13,11 +14,10 @@
 
     </th>
     <th style="width:22%; vertical-align: middle">Şəklin Adı</th>
-    <th style="width:7%; vertical-align: middle">Şəklin Görünüşü</th>
-    <th style="width:3%; vertical-align: middle">Profil Şəkli</th>
-    <th style="width:6%; vertical-align: middle">Yüklənmə Tarixi</th>
-    <th style="width:8%; vertical-align: middle">
-        Əməliyatlar
+    <th style="width:7%; vertical-align: middle" class="text-center">Şəklin Görünüşü</th>
+    <th style="width:3%; vertical-align: middle" class="text-center">Profil Şəkli</th>
+    <th style="width:6%; vertical-align: middle" class="text-center">Yüklənmə Tarixi</th>
+    <th style="width:8%; vertical-align: middle" class="text-center">
 
         <button data-url="<?php echo base_url("utech_admin_panel_portfolio_gallery_delete_group/$portfolio[id]")?>"
                 data-url2="<?php echo base_url("utech_admin_panel_portfolio_gallery_delete_all/$portfolio[id]")?>"
@@ -36,7 +36,7 @@
     <tbody>
     <?php foreach ($gallery as $item) {?>
         <tr class="change_color">
-            <td class="v-align-middle c_vertical_align_middle">
+            <td class="v-align-middle c_vertical_align_middle c_checkbox_div">
                 <div class="checkbox check-default">
                     <input class="isChoosed_portfolio" id="<?php echo $item["id"]?>" type="checkbox" value="1" data-cond = "true">
                     <label for="<?php echo $item["id"]?>"></label>
@@ -77,7 +77,6 @@
 
 </table>
 <!--                            portfoliolarin listi-->
-
 
 <?php }else{?>
     <div class="alert alert-info text-center">
@@ -295,6 +294,8 @@
         }
 
     });
+
+
 
 </script>
 

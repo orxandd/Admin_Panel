@@ -6,7 +6,7 @@
 
 
         <div class="content">
-            <h1 class="c_title">Portfellər</h1>
+            <h1 class="c_title"><span style="text-decoration: underline"><?php echo $portfolio["name"]?></span> Portfoliosunun Qalereyası</h1>
             <div class="grid simple ">
                 <div class="row" style="margin-top: 50px">
 
