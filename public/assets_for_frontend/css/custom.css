@@ -1,0 +1,17 @@
+.c_cursor_pointer{
+    cursor: pointer;
+}
+.c_img_cover{
+    height: 260px!important;
+    object-fit: cover;
+}
+
+.c_margin_bottom{
+    margin-bottom: 200px!important;
+}
+
+.c_responsive_slider{
+    max-width: 1170px;
+    max-height: 580px;
+    object-fit: cover!important;
+}
