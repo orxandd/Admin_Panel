@@ -20,7 +20,7 @@
          public function index()
          {
              if ($this->session->userdata("session")){
-                 redirect(base_url("utech_admin_panel_portfolio"));
+                 redirect(base_url("secure_admin_panel_portfolio"));
              }
 
              $this->load->library("session");
@@ -31,7 +31,7 @@
          public function login_act(){
 
              if ($this->session->userdata("session")){
-                 redirect(base_url("utech_admin_panel_portfolio"));
+                 redirect(base_url("secure_admin_panel_portfolio"));
              }
 
              $usr = strip_tags($this->input->post("usr"));
@@ -47,22 +47,22 @@
                 if ($result){
                     $this->session->set_userdata("session", true);
                     $this->session->set_flashdata("alert", "Daxil Oldunuz");
-                    redirect(base_url("utech_admin_panel_portfolio"));
+                    redirect(base_url("secure_admin_panel_portfolio"));
                 }else{
                     $this->session->set_flashdata("alert", "Username və ya Şifrə yanlışdır");
-                    redirect("utech_admin_panel_login_page");
+                    redirect("secure_admin_panel_login_page");
                 }
 
             }else{
                 $this->session->set_flashdata("alert", "Zəhmət olmasa boşluq buraxmayın!");
-                redirect(base_url("utech_admin_panel_login_page"));
+                redirect(base_url("secure_admin_panel_login_page"));
             }
 
          }
 
         public function logout(){
              $this->session->unset_userdata("session");
-             redirect(base_url("utech_admin_panel_login_page"));
+             redirect(base_url("secure_admin_panel_login_page"));
         }
 
 

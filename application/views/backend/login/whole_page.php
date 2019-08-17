@@ -7,7 +7,7 @@
         <div class="col-md-7 col-md-offset-2 tiles white no-padding">
             <div class="tiles grey p-t-20 p-b-20 no-margin text-black tab-content">
                 <div role="tabpanel" class="tab-pane active" id="tab_login">
-                    <form class="animated fadeIn validate" method="post" action="<?php echo base_url("utech_admin_panel_login_page_act")?>">
+                    <form class="animated fadeIn validate" method="post" action="<?php echo base_url("secure_admin_panel_login_page_act")?>">
                         <div class="row form-row m-l-20 m-r-20 xs-m-l-10 xs-m-r-10">
 
                             <h1 class="text-center">Utech Admin Panel</h1>

@@ -1,5 +1,5 @@
 .c_title{
-    font-size: 45px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 50px;
 }
@@ -47,5 +47,9 @@
 
 .c_float_left{
     float: left!important;
+}
+
+.c_marginleft_20px{
+    margin-left: 20px;
 }
 

@@ -1,5 +1,5 @@
 <?php if (!empty($portfolio_categories)){?>
-    <a href="<?php echo base_url("utech_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
+    <a href="<?php echo base_url("secure_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
     <br><br>
 
     <table class="table no-more-tables table-bordered table-hover">
@@ -16,8 +16,8 @@
                     <?php echo $portfolio_category["name"]?>
                 </td>
                 <td class="v-align-middle c_vertical_align_middle">
-                    <a href="<?php echo base_url("utech_admin_panel_portfolio_category_update/$portfolio_category[id]")?>" class="btn btn-warning">Yenilə</a>
-                    <button data-url="<?php echo base_url("utech_admin_panel_portfolio_category_delete/$portfolio_category[id]")?>" class="btn btn-danger c_delete_portfolio_category">Sil</button>
+                    <a href="<?php echo base_url("secure_admin_panel_portfolio_category_update/$portfolio_category[id]")?>" class="btn btn-warning">Yenilə</a>
+                    <button data-url="<?php echo base_url("secure_admin_panel_portfolio_category_delete/$portfolio_category[id]")?>" class="btn btn-danger c_delete_portfolio_category">Sil</button>
                 </td>
             </tr>
         <?php }?>
@@ -25,7 +25,7 @@
         </tbody>
     </table>
 <?php }else{?>
-    <a href="<?php echo base_url("utech_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
+    <a href="<?php echo base_url("secure_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
     <br><br>
 
     <div class="alert alert-info text-center">

@@ -1,4 +1,4 @@
- <?php
+<?php
      class Panel_admin_page_portfolio extends CI_Controller{
 
          public $parent_folder = "";
@@ -14,10 +14,18 @@
 
 
              $this->load->model("Portfolio_model");
+
+
+             if (!$this->session->userdata("session")){
+                 redirect(base_url("secure_admin_panel_login_page"));
+             }
+
+
          }
 
          public function index()
          {
+             $this->load->library("session");
              $this->load->view("$this->parent_folder/$this->sub_folder/whole_page");
          }
 
@@ -36,11 +44,16 @@
          public function portfolio_category_list_add_act(){
              $category_name = strip_tags($this->input->post("category_name"));
 
-             $this->Portfolio_model->portfolio_category_add(array(
-                 "name" => $category_name,
-             ));
-             $this->session->set_flashdata("alert", "Məlumat Əlavə Edildi!");
-             redirect(base_url("utech_admin_panel_portfolio_category"));
+             if (!empty($category_name)){
+                 $this->Portfolio_model->portfolio_category_add(array(
+                     "name" => $category_name,
+                 ));
+                 $this->session->set_flashdata("alert", "Məlumat Əlavə Edildi!");
+                 redirect(base_url("secure_admin_panel_portfolio_category"));
+             }else{
+                 $this->session->set_flashdata("alert", "Boşluq Buraxmayın!");
+                 redirect(base_url("secure_admin_panel_portfolio_category_add"));
+             }
 
          }
 
@@ -81,14 +94,25 @@
 
 
              $this->session->set_flashdata("alert", "Məlumat Yeniləndi!");
-             redirect(base_url("utech_admin_panel_portfolio_category"));
+             redirect(base_url("secure_admin_panel_portfolio_category"));
 
          }
 
          public function portfolio_category_list_delete($id){
-             $this->Portfolio_model->portfolio_category_delete(array(
+
+             $category = $this->Portfolio_model->get_portfolio_category_single(array(
                  "id" => $id,
              ));
+
+             $where1 = array(
+                 "id" => $id,
+             );
+
+             $where2 = array(
+                 "category_name" => $category["name"],
+             );
+
+             $this->Portfolio_model->portfolio_category_delete($where1,$where2);
 
              $data["portfolio_categories"] = $this->Portfolio_model->get_portfolio_category();
              $this->session->set_flashdata("alert", "Məlumat Silindi!");
@@ -118,17 +142,25 @@
              $category_name = $this->input->post("category");
 
              if (!empty($name) && !empty($desc)){
-                 $this->Portfolio_model->portfolio_list_add(array(
-                     "name" => $name,
-                     "desc" => $desc,
-                     "category_name" => $category_name,
-                     "upload_date" => date("y:m:d"),
-                 ));
-                 $this->session->set_flashdata("alert", "Məlumat Əlavə Edildi!");
-                 redirect(base_url("utech_admin_panel_portfolio_list"));
+
+                 if(!empty($category_name)){
+                     $this->Portfolio_model->portfolio_list_add(array(
+                         "name" => $name,
+                         "desc" => $desc,
+                         "category_name" => $category_name,
+                         "upload_date" => date("y:m:d"),
+                     ));
+                     $this->session->set_flashdata("alert", "Məlumat Əlavə Edildi!");
+                     redirect(base_url("secure_admin_panel_portfolio_list"));
+                 }else{
+                     $this->session->set_flashdata("alert_danger", "Zəhmət olmasa əvvəlcə bir kateqoriya yaradın!");
+                     redirect(base_url("secure_admin_panel_portfolio_add"));
+                 }
+
+
              }else{
                  $this->session->set_flashdata("alert_danger", "Zəhmət olmasa boşluq buraxmayın!");
-                 redirect(base_url("utech_admin_panel_portfolio_add"));
+                 redirect(base_url("secure_admin_panel_portfolio_add"));
              }
          }
 
@@ -162,10 +194,10 @@
                      )
                  );
                  $this->session->set_flashdata("alert", "Məlumat Yeniləndi!");
-                 redirect(base_url("utech_admin_panel_portfolio_list"));
+                 redirect(base_url("secure_admin_panel_portfolio_list"));
              }else{
                  $this->session->set_flashdata("alert_danger", "Zəhmət olmasa boşluq buraxmayın!");
-                 redirect(base_url("utech_admin_panel_portfolio_update/$id"));
+                 redirect(base_url("secure_admin_panel_portfolio_update/$id"));
              }
 
 

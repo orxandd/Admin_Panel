@@ -12,7 +12,7 @@
                     <div class="grid-body no-border c_grid_padding">
                         <div class="row">
 
-                            <form action="<?php echo base_url("utech_admin_panel_portfolio_category_update_act/$portfolio_category[id]")?>" method="post">
+                            <form action="<?php echo base_url("secure_admin_panel_portfolio_category_update_act/$portfolio_category[id]")?>" method="post">
                                 <label for="name">Kateqoriyanın Adı</label>
                                 <input id="name" type="text" class="form-control" name="category_name" value="<?php echo $portfolio_category["name"] ?>">
                                 <br>

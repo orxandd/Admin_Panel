@@ -22,40 +22,39 @@ $('.c_delete_portfolio_category').click(function () {
     $data_url_portfolio_category = $(this).data("url");
 
     swal({
-            title: "Əminsiniz?",
-            text: "Silinən məlumatlar geri qaytarılmayacaq!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
+        title: "Əminsiniz?",
+        text: "Silinən məlumatlar geri qaytarılmayacaq!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
         .then((willDelete) => {
-                if (willDelete) {
-                    // window.location.href = $data_url;
-                    $( "#dropzone" ).load(window.location.href + "#dropzone" );
-                    $.post($data_url_portfolio_category, {}, function (response) {
-                        $('.c_resfresh_portfolio_category').html(response);
+            if (willDelete) {
 
-                        // multiple switchler ucun kod
-                        isPrimary = {
-                            color             : '#8307bd',
-                            className         : 'switchery'
+                // window.location.href = $data_url;
+                $.post($data_url_portfolio_category, {}, function (response) {
+                    $('.c_resfresh_portfolio_category').html(response);
 
-                        };
+                    // multiple switchler ucun kod
+                    isPrimary = {
+                        color             : '#8307bd',
+                        className         : 'switchery'
 
-                        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+                    };
 
-                        elems.forEach(function(html) {
+                    var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
 
-                            var switchery = new Switchery(html, isPrimary);
+                    elems.forEach(function(html) {
+
+                        var switchery = new Switchery(html, isPrimary);
 
 
-                        });lems = Array.prototype.slice.call(document.querySelectorAll('.js-switch-dfcolor'));
+                    });lems = Array.prototype.slice.call(document.querySelectorAll('.js-switch-dfcolor'));
 
-                    })
-                }
-            });
+                })
+            }
+        });
 });
-
 
 //editoru initialize etmek ucun kod
 if (CKEDITOR.replace( 'editor1', {})){

@@ -1,5 +1,5 @@
 
-<a href="<?php echo base_url("utech_admin_panel_portfolio_add")?>" class="btn btn-success c_right">
+<a href="<?php echo base_url("secure_admin_panel_portfolio_add")?>" class="btn btn-success c_right">
     <i class="fa fa-plus"></i>
     <span class="c_add_text">Əlavə Et</span>
 </a>
@@ -68,17 +68,17 @@
                     <?php echo $item["upload_date"]?>
                 </td>
                 <td class="v-align-middle c_vertical_align_middle text-center">
-                    <a href="<?php echo base_url("utech_admin_panel_portfolio_gallery/$item[id]")?>" class="btn btn-primary">
+                    <a href="<?php echo base_url("secure_admin_panel_portfolio_gallery/$item[id]")?>" class="btn btn-primary">
                         <i class="fa fa-image"></i>
                         Qalereya
                     </a>
                 </td>
                 <td class="v-align-middle c_vertical_align_middle text-center">
-                    <a href="<?php echo base_url("utech_admin_panel_portfolio_update/$item[id]")?>" class="btn btn-warning">
+                    <a href="<?php echo base_url("secure_admin_panel_portfolio_update/$item[id]")?>" class="btn btn-warning">
                         <i class="fa fa-pencil-square-o"></i>
                         Yenilə
                     </a>
-                    <button data-url="<?php echo base_url("utech_admin_panel_portfolio_delete/$item[id]")?>" class="btn btn-danger c_delete_portfolio_category">
+                    <button data-url="<?php echo base_url("secure_admin_panel_portfolio_delete/$item[id]")?>" class="btn btn-danger c_delete_portfolio_category">
                         <i class="fa fa-trash"></i>
                         Sil
                     </button>

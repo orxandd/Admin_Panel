@@ -11,8 +11,8 @@
                 <div class="row" style="margin-top: 50px">
 
 
-                    <form action   =   "<?php echo base_url("utech_admin_panel_portfolio_gallery_add/$portfolio[id]")?>"
-                          data-url =   "<?php echo base_url("utech_admin_panel_portfolio_gallery_refresh/$portfolio[id]")?>"
+                    <form action   =   "<?php echo base_url("secure_admin_panel_portfolio_gallery_add/$portfolio[id]")?>"
+                          data-url =   "<?php echo base_url("secure_admin_panel_portfolio_gallery_refresh/$portfolio[id]")?>"
                           class="dropzone c_dropzone"
                           enctype="multipart/form-data"
                           id="dropzone">
