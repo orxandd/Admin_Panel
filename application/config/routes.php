@@ -53,6 +53,7 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
 //===================================Admin Panel linkleri===================
 
 
@@ -78,3 +79,4 @@ $route['secure_admin_panel_login_page_logout'] = 'Panel_admin_page_login/logout'
 
 //---------------------------------Login hissesi-----------------------------
 //===================================Admin Panel linkleri===================
+
