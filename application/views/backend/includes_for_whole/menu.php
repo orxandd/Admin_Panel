@@ -73,6 +73,16 @@
                 </li>
 
 
+                <li class="open active">
+                    <a href="<?php echo base_url("secure_admin_panel_message")?>">
+                        <i class="material-icons">email</i>
+                        <span class="title">Kontakt 1</span>
+                        <span class=" badge badge-disable pull-right "></span>
+                    </a>
+                </li>
+
+
+
 
 
 
