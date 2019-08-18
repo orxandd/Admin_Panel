@@ -25,6 +25,10 @@ $route['secure_admin_panel_portfolio_category_update_act/(.*)'] = 'Panel_admin_p
 //portfolio kateqoriyalari silme hissesi
 $route['secure_admin_panel_portfolio_category_delete/(.*)'] = 'Panel_admin_page_portfolio/portfolio_category_list_delete/$1';
 
+//portfolio kateqoriyalari silme hissesi
+$route['secure_admin_panel_portfolio_category_search'] = 'Panel_admin_page_portfolio/portfolio_search';
+
+
 //----------------------------- (Kateqoriyasi olan tek dilli  portfolio hissesinin linkleri) portfolio kateqoriyalari---------------------------------------------------------------
 
 
@@ -93,7 +97,6 @@ $route['secure_admin_panel_portfolio_gallery_delete_all/(.*)'] = 'Panel_admin_pa
 
 
 
-//==
 
 //----------------------------- (Kateqoriyasi olan 3 dilli  portfolio hissesinin linkleri) portfolio kateqoriyalari---------------------------------------------------------------
 
