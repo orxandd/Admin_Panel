@@ -33,7 +33,9 @@ $('.c_delete_portfolio_category').click(function () {
 
                 // window.location.href = $data_url;
                 $.post($data_url_portfolio_category, {}, function (response) {
+                    $('#c_search').val('');
                     $('.c_resfresh_portfolio_category').html(response);
+
 
                     // multiple switchler ucun kod
                     isPrimary = {
@@ -296,3 +298,34 @@ $(".c_check_all").click(function () {
 });
 
 
+//    dinamik search ajax ile
+$('.c_spinner').hide();
+$("#c_search").keyup(function () {
+
+    $.ajax({
+        type: "POST",
+        url: $(this).data("url"),
+        data: {my_data: $(this).val()},
+
+        beforeSend: function() {
+            $('.c_spinner').show();
+        },
+
+        complete: function() {
+            $('.c_spinner').hide();
+        },
+
+
+        success: function(data) {
+            // Call this function on success
+            // someFunction( data );
+            // return data;
+
+            $(".c_resfresh_portfolio_category").html(data)
+        },
+        error: function() {
+            alert('Error occured');
+        }
+    });
+
+});

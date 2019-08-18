@@ -60,7 +60,9 @@
                     // window.location.href = $data_url;
                     $.post($data_url_portfolio_category, {}, function (response) {
 
+                        $('#c_search').val('');
                         $('.c_resfresh_portfolio_category').html(response);
+
 
                     })
                 }
