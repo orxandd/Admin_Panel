@@ -341,11 +341,3 @@ $route['secure_admin_panel_gallery_delete_all'] = 'Panel_admin_page_gallery/gall
 
 
 
-
-//-------------------- contact hissesi -----------------------
-$route['secure_admin_panel_message'] = 'Panel_admin_page_contact1/index';
-$route['secure_admin_panel_contact_act'] = 'Panel_admin_page_contact1/contact_update';
-$route['secure_admin_panel_message_delete/(:any)'] = 'Panel_admin_page_contact1/delete_message/$1';
-$route['secure_admin_panel_message_single/(:any)'] = 'Panel_admin_page_contact1/single_message/$1';
-//-------------------- contact hissesi -----------------------
-
