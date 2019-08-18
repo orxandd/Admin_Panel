@@ -1,6 +1,9 @@
+
 <?php if (!empty($portfolio_categories)){?>
-    <a href="<?php echo base_url("secure_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
-    <br><br>
+
+
+
+<!--    <br><br><br>-->
 
     <table class="table no-more-tables table-bordered table-hover">
         <thead>
@@ -25,10 +28,11 @@
         </tbody>
     </table>
 <?php }else{?>
-    <a href="<?php echo base_url("secure_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
-    <br><br>
 
-    <div class="alert alert-info text-center">
+
+<!--    <a style="float: right;" href="--><?php //echo base_url("secure_admin_panel_portfolio_category_add")?><!--" class="btn btn-success">Əlavə Et</a>-->
+
+    <div class="alert alert-info text-center c_alert_margin" style="margin-top: 57px   ">
         <h3>Məlumat daxil edilməmişdir</h3>
     </div>
 <?php }?>
@@ -37,6 +41,7 @@
 
 <!--sehifenin islemesi ucun lazim olan scriptler-->
 <script>
+
     //galereyadaki silme islemine alert verme
     $('.c_delete_portfolio_category').click(function () {
 
@@ -63,9 +68,9 @@
 
     });
 
+
 </script>
 <!--sehifenin islemesi ucun lazim olan scriptler-->
-
 
 <!--melumat alerti-->
 <?php if($this->session->flashdata("alert")){ ?>

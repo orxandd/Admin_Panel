@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
     <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>Webarch - Responsive Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+
 
     <script src="<?php echo base_url('public/assets_for_backend')?>/apps/head/QJpHOqznaMvNOv9CGoAdo_yvYKU.js"></script>
     <link href="<?php echo base_url('public/assets_for_backend')?>/plugins/pretty-checkbox/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css" />
@@ -41,7 +43,6 @@
     <link href="<?php echo base_url('public/assets_for_backend')?>/custom/css/switchery.min.css" rel="stylesheet" type="text/css" />
 
     <link href="<?php echo base_url('public/assets_for_backend')?>/custom/css/custom.css" rel="stylesheet" type="text/css" />
-
 
 </head>
 

@@ -27,6 +27,11 @@
          $this->db->where($where1)->delete("portfolio_category");
          $this->db->where($where2)->delete("portfolio");
      }
+
+     public function search($keyword){
+         return $this->db->like("name", $keyword)->order_by("id", "DESC")->get("portfolio_category")->result_array();
+     }
+
 //     portfolio kateqoriya hissesi
 
 

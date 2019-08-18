@@ -53,3 +53,22 @@
     margin-left: 20px;
 }
 
+
+.c_search_input{
+    float: left;
+}
+
+.row{
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+
+.c_spinner{
+    position: absolute;
+    left: 240px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 8px;
+
+}
