@@ -6,7 +6,7 @@
         $this->load->model("Contact_Model");
 
         if (!$this->session->userdata("session")){
-            redirect(base_url("utech_admin_panel_login_page"));
+            redirect(base_url("secure_admin_panel_login_page"));
         }
 
     }

@@ -132,6 +132,32 @@
 
 
 
+                <li class="start  open active ">
+                    <a href="<?php echo base_url("secure_admin_panel_about")?>">
+                        <i class="material-icons">info</i>
+
+                        <!--                        About-->
+                        <span class="title">About 1</span>
+
+                        <span class="selected"></span>
+                    </a>
+                </li>
+
+
+                <li class="start  open active ">
+                    <a href="<?php echo base_url("secure_admin_panel_about_ml")?>">
+                        <i class="material-icons">info</i>
+
+                        <!--                        About-->
+                        <span class="title">About (3 dilli)</span>
+
+                        <span class="selected"></span>
+                    </a>
+                </li>
+
+
+
+
 
                 <li class="open active">
                     <a href="<?php echo base_url("secure_admin_panel_admin_update")?>">
