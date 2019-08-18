@@ -118,6 +118,15 @@
              $this->session->set_flashdata("alert", "Məlumat Silindi!");
              $this->load->view("$this->parent_folder/$this->sub_folder/portfolio_category/portfolio_category_delete_render_page/portfolio_category_table", $data);
          }
+
+         public function portfolio_search(){
+            $keyword = strip_tags($this->input->post("my_data"));
+
+            $data["portfolio_categories"] = $this->Portfolio_model->search($keyword);
+
+            $this->load->view("$this->parent_folder/$this->sub_folder/portfolio_category/portfolio_category_delete_render_page/portfolio_category_table", $data);
+
+         }
 //         =======================Portfolio_category hissesi=================================
 
 
