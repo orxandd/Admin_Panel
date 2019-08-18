@@ -11,8 +11,11 @@
                 <div class="row" style="margin-top: 50px">
                     <div class="grid-body no-border c_grid_padding">
 
-                        <input data-url = "<?php echo base_url("secure_admin_panel_portfolio_category_search")?>" id="c_search" value="" type="text" class="c_search_input" placeholder="Axtarış">
-                        <i class="fa fa-spinner c_spinner fa-spin"></i>
+                       <?php if (!empty($portfolio_categories)){?>
+                           <input data-url = "<?php echo base_url("secure_admin_panel_portfolio_category_search")?>" id="c_search" value="" type="text" class="c_search_input" placeholder="Axtarış">
+                           <i class="fa fa-spinner c_spinner fa-spin"></i>
+                       <?php }?>
+
 
                         <a style="margin-bottom: 20px; float: right;" href="<?php echo base_url("secure_admin_panel_portfolio_category_add")?>" class="btn btn-success">Əlavə Et</a>
 
