@@ -61,6 +61,10 @@
          $this->db->where($where)->delete("portfolio");
          $this->db->where("portfolio_id", $where["id"])->delete("portfolio_gallery");
      }
+
+     public function portfolio_filter($where){
+         return $this->db->where($where)->get("portfolio")->result_array();
+     }
 //     portfolio listinin hissesi
 
 

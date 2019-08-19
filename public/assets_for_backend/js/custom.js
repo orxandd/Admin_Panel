@@ -35,6 +35,7 @@ $('.c_delete_portfolio_category').click(function () {
                 $.post($data_url_portfolio_category, {}, function (response) {
                     $('#c_search').val('');
                     $('.c_resfresh_portfolio_category').html(response);
+                    $("#c_filter").val("all");
 
 
                     // multiple switchler ucun kod
@@ -315,6 +316,39 @@ $("#c_search").keyup(function () {
             $('.c_spinner').hide();
         },
 
+
+        success: function(data) {
+            // Call this function on success
+            // someFunction( data );
+            // return data;
+
+            $(".c_resfresh_portfolio_category").html(data)
+        },
+        error: function() {
+            alert('Error occured');
+        }
+    });
+
+});
+
+
+
+//    dinamik filter ajax ile
+$('#c_spinner').hide();
+$('#c_filter').on('change', function() {
+
+    $.ajax({
+        type: "POST",
+        url: $(this).data("url"),
+        data: {my_data: $(this).val()},
+
+        beforeSend: function() {
+            $('#c_spinner').show();
+        },
+
+        complete: function() {
+            $('#c_spinner').hide();
+        },
 
         success: function(data) {
             // Call this function on success

@@ -133,6 +133,7 @@
 
 //         =======================Umumi portfoliolarin hissesi =================================
          public function portfolio_list(){
+             $data["portfolio_categories"] = $this->Portfolio_model->get_portfolio_category();
              $data["portfolio"] = $this->Portfolio_model->get_portfolio_list();
              $data["all_gallery"] = $this->Portfolio_model->get_gellery_list();
 
@@ -222,6 +223,32 @@
              $data["all_gallery"] = $this->Portfolio_model->get_gellery_list();
 
              $this->load->view("$this->parent_folder/$this->sub_folder/portfolio_list/portfolio_list_render_page/portfolio_table", $data);
+
+         }
+
+         public function portfolio_filter(){
+             $keyword = strip_tags($this->input->post("my_data"));
+
+             if ($keyword == "all"){
+                 $data["portfolio"] = $this->Portfolio_model->get_portfolio_list();
+                 $data["all_gallery"] = $this->Portfolio_model->get_gellery_list();
+                 $data["portfolio_categories"] = $this->Portfolio_model->get_portfolio_category();
+
+                 $this->load->view("$this->parent_folder/$this->sub_folder/portfolio_list/portfolio_list_render_page/portfolio_table", $data);
+
+             }else{
+                 $where = array(
+                     "category_name" => $keyword,
+                 );
+
+                 $data["portfolio"] = $this->Portfolio_model->portfolio_filter($where);
+                 $data["all_gallery"] = $this->Portfolio_model->get_gellery_list();
+                 $data["portfolio_categories"] = $this->Portfolio_model->get_portfolio_category();
+
+                 $this->load->view("$this->parent_folder/$this->sub_folder/portfolio_list/portfolio_list_render_page/portfolio_table", $data);
+
+             }
+
 
          }
 //         =======================Umumi portfoliolarin hissesi =================================

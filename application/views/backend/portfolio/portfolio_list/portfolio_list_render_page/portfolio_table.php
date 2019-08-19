@@ -1,8 +1,4 @@
 
-<a href="<?php echo base_url("secure_admin_panel_portfolio_add")?>" class="btn btn-success c_right">
-    <i class="fa fa-plus"></i>
-    <span class="c_add_text">Əlavə Et</span>
-</a>
 
 
 <?php if (!empty($portfolio)){?>
@@ -93,10 +89,15 @@
     <!--                            portfoliolarin listi-->
 
 <?php }else{?>
-    <br><br><br><br>
-    <div class="alert alert-info text-center">
+
+
+
+    <br>
+    <div class="alert alert-info text-center" style="margin-top: 5px">
         <h3>Məlumat daxil edilməmişdir</h3>
     </div>
+
+
 <?php }?>
 
 
@@ -118,7 +119,7 @@
                     // window.location.href = $data_url;
                     $.post($data_url_portfolio_category, {}, function (response) {
                         $('.c_resfresh_portfolio_category').html(response);
-
+                        $("#c_filter").val("all");
                     })
                 }
             });
