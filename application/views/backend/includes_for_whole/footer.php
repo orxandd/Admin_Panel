@@ -22,9 +22,6 @@
 
 
 <script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-<script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery-ricksaw-chart/js/raphael-min.js"></script>
-<script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery-ricksaw-chart/js/d3.v2.js"></script>
-<script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery-ricksaw-chart/js/rickshaw.min.js"></script>
 <script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery-sparkline/jquery-sparkline.js"></script>
 <script src="<?php echo base_url('public/assets_for_backend')?>/plugins/skycons/skycons.js"></script>
 <script src="<?php echo base_url('public/assets_for_backend')?>/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
@@ -38,7 +35,6 @@
 <script src="<?php echo base_url('public/assets_for_backend')?>/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
 
 
-<script src="<?php echo base_url('public/assets_for_backend')?>/js/dashboard_v2.js" type="text/javascript"></script>
 <script src="<?php echo base_url('public/assets_for_backend')?>/js/sweetalert.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url('public/assets_for_backend')?>/js/iziToast.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url('public/assets_for_backend')?>/js/dropzone.js" type="text/javascript"></script>

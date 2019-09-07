@@ -59,6 +59,28 @@ $('.c_delete_portfolio_category').click(function () {
         });
 });
 
+
+//silme islemine redirect ederek silen
+$('.c_delete_portfolio_category_redirect').click(function () {
+
+    $data_url_portfolio_category = $(this).data("url");
+
+    swal({
+        title: "Əminsiniz?",
+        text: "Silinən məlumatlar geri qaytarılmayacaq!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = $data_url_portfolio_category;
+            }
+        });
+});
+
+
+
 //editoru initialize etmek ucun kod
 if (CKEDITOR.replace( 'editor1', {})){
     CKEDITOR.replace( 'editor1', {});
@@ -68,6 +90,7 @@ if (CKEDITOR.replace( 'editor1', {})){
 var name = "dropzone";
 if($("#" + name).length != 0) {
     var myDropzone = new Dropzone("#dropzone");
+
     myDropzone.on("complete", function(file) {
         $data_url_of_dropzone = $('#dropzone').data("url");
 
