@@ -489,6 +489,8 @@ $route['secure_admin_panel_car_model_update_ajax_img/(.*)'] = 'Panel_admin_page_
 
 
 
+
+
 //============================================================Masin aksesuarlari sayti ucun linkler=============================
 
 
