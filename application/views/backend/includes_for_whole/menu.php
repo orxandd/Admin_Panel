@@ -181,6 +181,14 @@
                     </a>
                 </li>
 
+                <li class="open active">
+                    <a href="<?php echo base_url("secure_admin_panel_car_parts")?>">
+                        <i class="material-icons">directions_car</i>
+                        <span class="title">Maşın Hissələri</span>
+                        <span class=" badge badge-disable pull-right "></span>
+                    </a>
+                </li>
+
 
 
 <!--=================================================Car Repair sayti ucun olan hisse===========================================-->
