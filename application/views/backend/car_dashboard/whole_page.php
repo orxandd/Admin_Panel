@@ -50,7 +50,7 @@
                                             <h1>Brendlərin Modelləri</h1>
                                             <img style="height: 300px; object-fit: contain" src="https://i.ytimg.com/vi/ghjVMq7DMM4/maxresdefault.jpg" width="100%" alt="">
                                             <br><br>
-                                            <a href="<?php echo base_url("secure_admin_panel_portfolio_list_ml")?>" class="btn btn-primary c_portfolio_btn">Get</a>
+                                            <a href="<?php echo base_url("secure_admin_panel_car_brand_model")?>" class="btn btn-primary c_portfolio_btn">Get</a>
                                         </div>
                                     </div>
                                 </div>

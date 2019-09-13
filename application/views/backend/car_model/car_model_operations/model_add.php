@@ -6,13 +6,13 @@
 
 
     <div class="content">
-        <h1 class="c_title"><?php echo $brand["name_az"]?> Brendinə Klasın Əlavə Edilməsi </h1>
+        <h1 class="c_title"><?php echo $brand["name_az"]?> Brendinə Modelin Əlavə Edilməsi </h1>
         <div class="grid simple ">
             <div class="row" style="margin-top: 50px">
                 <div class="grid-body no-border c_grid_padding">
                     <div class="row">
 
-                        <form action="<?php echo base_url("secure_admin_panel_car_class_add_act/$brand[id]")?>" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo base_url("secure_admin_panel_car_model_add_act/$brand[id]")?>" method="post" enctype="multipart/form-data">
 
 
                             <!--                                3 dilin linki-->
@@ -29,7 +29,7 @@
 
                                 <!--                                        Azerbaycanca olan hisse-->
                                 <div id="az" class="tab-pane fade in active">
-                                    <label for="name">Klasın Adı</label>
+                                    <label for="name">Modelin Adı</label>
                                     <input id="name" type="text" class="form-control" name="category_name_az">
                                     <br>
                                 </div>
@@ -39,7 +39,7 @@
 
                                 <!--                                        Ingilisce olan hisse-->
                                 <div id="en" class="tab-pane fade">
-                                    <label for="name">Name of Class</label>
+                                    <label for="name">Name of Model</label>
                                     <input id="name" type="text" class="form-control" name="category_name_en">
                                     <br>
                                 </div>
@@ -50,7 +50,7 @@
 
                                 <!--                                        Rusca olan hisse-->
                                 <div id="ru" class="tab-pane fade">
-                                    <label for="name">Наименование Класса</label>
+                                    <label for="name">Наименование Модели</label>
                                     <input id="name" type="text" class="form-control" name="category_name_ru">
                                     <br>
                                 </div>
@@ -59,7 +59,18 @@
                             </div>
                             <!--                                3 dilde olan divler-->
 
-                            <input name="file" style="width: 97.5%!important;margin-left: 18px;line-height: 0px!important;" type="file" class="form-control">
+
+                            <label style="margin-left: 18px">Brendin Klası</label>
+                            <select style="margin-left: 18px" name="class_category" class="">
+                                <option value="0">Heç biri</option>
+                                <?php foreach ($classes as $item) { ?>
+                                    <option value="<?php echo $item["id"]?>"><?php echo $item["name_az"]?></option>
+                                <?php }?>
+
+                            </select>
+                            <br><br><br>
+
+                            <input name="file" style="margin-left: 18px;line-height: 0px!important; width: 97.5%!important;" type="file" class="form-control">
                             <br>
                             <button type="submit" class="btn btn-primary c_marginleft_20px">Əlavə Et</button>
 

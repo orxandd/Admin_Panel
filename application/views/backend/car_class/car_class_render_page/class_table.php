@@ -1,5 +1,8 @@
+<a href="<?php echo base_url("secure_admin_panel_car_brand_class")?>" class="btn btn-primary">Geriyə</a>
+
+
 <?php if (!empty($classes)){?>
-    <a href="<?php echo base_url("secure_admin_panel_car_brand_add")?>" class="btn btn-success">Əlavə Et</a>
+    <a href="<?php echo base_url("secure_admin_panel_car_class_add/$brand_id")?>" class="btn btn-success">Əlavə Et</a>
     <br><br>
 
     <table class="table no-more-tables table-bordered table-hover">
@@ -29,13 +32,13 @@
 
 
                 <td style="text-align: center" class="v-align-middle c_vertical_align_middle">
-                    <img width="130px" height="100px" src="<?php echo base_url("uploads/car_brands/$item[img]")?>" alt="Şəkil Tapılmadı">
+                    <img width="130px" height="100px" src="<?php echo base_url("uploads/car_classes/$item[img]")?>" alt="Şəkil Tapılmadı">
                 </td>
                 
                 <td class="v-align-middle c_vertical_align_middle">
                     <center>
-                        <a href="<?php echo base_url("secure_admin_panel_car_brand_update/$item[id]")?>" class="btn btn-warning">Yenilə</a>
-                        <button data-url="<?php echo base_url("secure_admin_panel_car_brand_delete/$item[id]")?>" class="btn btn-danger c_delete_portfolio_category_redirect">Sil</button>
+                        <a href="<?php echo base_url("secure_admin_panel_car_class_update/$item[brand_id]/$item[id]")?>" class="btn btn-warning">Yenilə</a>
+                        <button data-url="<?php echo base_url("secure_admin_panel_car_class_delete/$item[id]")?>" class="btn btn-danger c_delete_portfolio_category_redirect">Sil</button>
                     </center>
                 </td>
             </tr>
@@ -44,7 +47,7 @@
         </tbody>
     </table>
 <?php }else{?>
-    <a href="<?php echo base_url("secure_admin_panel_car_brand_add")?>" class="btn btn-success">Əlavə Et</a>
+    <a href="<?php echo base_url("secure_admin_panel_car_class_add/$brand_id")?>" class="btn btn-success">Əlavə Et</a>
     <br><br>
 
     <div class="alert alert-info text-center">

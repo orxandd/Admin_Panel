@@ -7,9 +7,18 @@
          return $this->db->order_by("id", "DESC")->get('car_brands')->result_array();
      }
 
+     public function get_brand_row($where)
+     {
+         return $this->db->where($where)->get('car_brands')->row_array();
+     }
+
      public function get_class_of_brands($where)
      {
-         return $this->db->where($where)->get('car_class')->result_array();
+         return $this->db->where($where)->order_by("id", "DESC" )->get('car_class')->result_array();
+     }
+
+     public function get_class_row($where){
+         return $this->db->where($where)->get("car_class")->row_array();
      }
 
      public function add_class($data)
@@ -17,12 +26,10 @@
          $this->db->insert("car_class",$data);
      }
 
-
      public function update_class($where, $data)
      {
          $this->db->where($where)->update("car_class",$data);
      }
-
 
      public function delete_class($where)
      {

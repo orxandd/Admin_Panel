@@ -1,3 +1,5 @@
+<a href="<?php echo base_url("secure_admin_panel_car_main")?>" class="btn btn-primary">Geriyə</a>
+
 <?php if (!empty($brands)){?>
     <a href="<?php echo base_url("secure_admin_panel_car_brand_add")?>" class="btn btn-success">Əlavə Et</a>
     <br><br>

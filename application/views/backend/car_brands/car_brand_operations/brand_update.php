@@ -62,7 +62,7 @@
                                     <img style="margin-left: 18px; object-fit: contain;" width="600px" height="300px" src="<?php echo base_url("uploads/car_brands/$brand[img]")?>" alt="Şəkil Yüklənmədi">
                                 </center>
                                 <br><br>
-                                <input name="file" style="margin-left: 18px; line-height: 0px!important;" type="file" class="form-control">
+                                <input name="file" style="width: 97.5%!important;margin-left: 18px; line-height: 0px!important;" type="file" class="form-control">
                                 <br>
                                 <button type="submit" class="btn btn-primary c_marginleft_20px">Əlavə Et</button>
 

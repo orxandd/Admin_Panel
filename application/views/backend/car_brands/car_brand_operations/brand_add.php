@@ -60,7 +60,7 @@
                             </div>
                             <!--                                3 dilde olan divler-->
 
-                            <input name="file" style="margin-left: 18px;line-height: 0px!important;" type="file" class="form-control">
+                            <input name="file" style="width: 97.5%!important;margin-left: 18px;line-height: 0px!important;" type="file" class="form-control">
                             <br>
                             <button type="submit" class="btn btn-primary c_marginleft_20px">Əlavə Et</button>
 

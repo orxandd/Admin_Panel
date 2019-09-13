@@ -464,13 +464,27 @@ $route['secure_admin_panel_car_brand_delete/(.*)'] = 'Panel_admin_page_car_brand
 //-------------------- Class hissesi-----------------------
 $route['secure_admin_panel_car_brand_class'] = 'Panel_admin_page_car_class/brand_class';
 $route['secure_admin_panel_car_class_list/(.*)'] = 'Panel_admin_page_car_class/car_class/$1';
-$route['secure_admin_panel_car_class_add/(.*)'] = 'Panel_admin_page_car_class/brand_add/$1';
-$route['secure_admin_panel_car_class_add_act'] = 'Panel_admin_page_car_class/class_add_act';
-$route['secure_admin_panel_car_class_update/(.*)'] = 'Panel_admin_page_car_class/class_update/$1';
-$route['secure_admin_panel_car_class_update_act/(.*)'] = 'Panel_admin_page_car_class/class_update_act/$1';
+$route['secure_admin_panel_car_class_add/(.*)'] = 'Panel_admin_page_car_class/class_add/$1';
+$route['secure_admin_panel_car_class_add_act/(.*)'] = 'Panel_admin_page_car_class/class_add_act/$1';
+$route['secure_admin_panel_car_class_update/(.*)/(.*)'] = 'Panel_admin_page_car_class/class_update/$1/$2';
+$route['secure_admin_panel_car_class_update_act/(.*)/(.*)'] = 'Panel_admin_page_car_class/class_update_act/$1/$2';
 $route['secure_admin_panel_car_class_delete/(.*)'] = 'Panel_admin_page_car_class/class_delete/$1';
 //-------------------- Class hissesi -----------------------
 
+
+//-------------------- Model hissesi-----------------------
+$route['secure_admin_panel_car_brand_model'] = 'Panel_admin_page_car_model/classes';
+$route['secure_admin_panel_car_model_list/(.*)'] = 'Panel_admin_page_car_model/car_model/$1';
+$route['secure_admin_panel_car_model_add/(.*)'] = 'Panel_admin_page_car_model/model_add/$1';
+$route['secure_admin_panel_car_model_add_act/(.*)'] = 'Panel_admin_page_car_model/model_add_act/$1';
+$route['secure_admin_panel_car_model_update/(.*)/(.*)'] = 'Panel_admin_page_car_model/model_update/$1/$2';
+$route['secure_admin_panel_car_model_update_act/(.*)/(.*)'] = 'Panel_admin_page_car_model/model_update_act/$1/$2';
+$route['secure_admin_panel_car_model_delete/(.*)'] = 'Panel_admin_page_car_model/model_delete/$1';
+$route['secure_admin_panel_car_model_update_ajax/(.*)'] = 'Panel_admin_page_car_model/model_ajax_update/$1';
+$route['secure_admin_panel_car_model_update_ajax_select_tag/(.*)'] = 'Panel_admin_page_car_model/model_ajax_update_select_tag/$1';
+$route['secure_admin_panel_car_model_update_ajax_img/(.*)'] = 'Panel_admin_page_car_model/model_ajax_update_img/$1';
+
+//-------------------- Model hissesi -----------------------
 
 
 

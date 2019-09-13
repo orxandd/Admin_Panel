@@ -18,11 +18,11 @@
 
                             <table class="table no-more-tables table-bordered table-hover">
                                 <thead>
-                                <th style="width:20%">Brendin adı AZ</th>
-                                <th style="width:20%">Brendin adı EN</th>
-                                <th style="width:20%">Brendin adı RU</th>
-                                <th style="width:20%; text-align: center">Brendin Şəkli</th>
-                                <th style="width:19%; text-align: center">Brendin Klası</th>
+                                <th style="width:20%">Klasın adı AZ</th>
+                                <th style="width:20%">Klasın adı EN</th>
+                                <th style="width:20%">Klasın adı RU</th>
+                                <th style="width:20%; text-align: center">Klasın Şəkli</th>
+                                <th style="width:19%; text-align: center">Əməliyyatlar</th>
                                 </thead>
 
                                 <tbody>
@@ -48,7 +48,7 @@
 
                                         <td class="v-align-middle c_vertical_align_middle">
                                             <center>
-                                                <a href="<?php echo base_url("secure_admin_panel_car_class_list/$item[id]")?>" class="btn btn-info">Klassları</a>
+                                                <a href="<?php echo base_url("secure_admin_panel_car_model_list/$item[id]")?>" class="btn btn-info">Modelləri</a>
                                             </center>
                                         </td>
                                     </tr>
