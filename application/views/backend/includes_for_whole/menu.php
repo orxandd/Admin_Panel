@@ -1,8 +1,8 @@
 <!--        HEAD NAVBAR                -->
 <div class="navbar-inner">
     <div class="header-seperation">
-        <a href="index-2.html">
-            <img src="<?php echo base_url("public/assets_for_backend")?>/img/logo.png" class="logo" alt="" data-src="<?php echo base_url("public/assets_for_backend")?>/img/logo.png" data-src-retina="assets/img/logo2x.png" width="106" height="21" />
+        <a>
+           <h3 style="color: white; margin-left: 10px"> Admin Panel </h3>
         </a>
 
 
@@ -36,10 +36,9 @@
 
 
             <!--                Admin profile-->
-
             <div class="user-info-wrapper sm">
                 <div class="profile-wrapper sm">
-                    <img src="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.png" alt="" data-src="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.png" data-src-retina="<?php echo base_url("public/assets_for_backend")?>/img/profiles/avatar.png" width="69" height="69" />
+                    <img src="<?php echo base_url("public/assets_for_backend")?>/img/avatar.png" alt="" data-src="<?php echo base_url("public/assets_for_backend")?>/img/avatar.png" data-src-retina="<?php echo base_url("public/assets_for_backend")?>/img/avatar.png" width="69" height="69" />
                 </div>
                 <div class="user-info sm">
                     <div class="username" style="margin-top: 12px;">Admin
@@ -47,7 +46,6 @@
                     </div>
                 </div>
             </div>
-
             <!--                Admin profile-->
 
             <br>
@@ -57,8 +55,6 @@
 
 
             <!--                Left menu side-->
-
-
             <ul>
 
                 <li class="start  open active ">
@@ -125,7 +121,7 @@
                     <a href="<?php echo base_url("secure_admin_panel_gallery")?>">
                         <i class="material-icons">image</i>
 
-                        <!--                        Portfel-->
+                        <!--                        galereya-->
                         <span class="title">Dropzonlu Galereya</span>
 
                         <span class="selected"></span>
@@ -172,9 +168,24 @@
 
 
 
+<!--=================================================Car Repair sayti ucun olan hisse===========================================-->
+
+                <hr>
+                <span>Car repair sayti ucun lazim olan hisse</span>
+
+                <li class="open active">
+                    <a href="<?php echo base_url("secure_admin_panel_car_main")?>">
+                        <i class="material-icons">directions_car</i>
+                        <span class="title">Maşın Akksesuarları</span>
+                        <span class=" badge badge-disable pull-right "></span>
+                    </a>
+                </li>
+
+
+
+<!--=================================================Car Repair sayti ucun olan hisse===========================================-->
+
             </ul>
-
-
             <!--                Left menu side-->
 
 
@@ -183,10 +194,3 @@
             <div class="clearfix"></div>
         </div>
     </div>
-
-    <!--        LOGOUT BUTTON-->
-    <div class="footer-widget">
-        <div class="pull-right">
-            <a href="lockscreen.html"><i class="material-icons">power_settings_new</i></a></div>
-    </div>
-    <!--        LOGOUT BUTTON-->

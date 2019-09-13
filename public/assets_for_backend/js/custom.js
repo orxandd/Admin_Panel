@@ -59,6 +59,28 @@ $('.c_delete_portfolio_category').click(function () {
         });
 });
 
+
+//silme islemine redirect ederek silen
+$('.c_delete_portfolio_category_redirect').click(function () {
+
+    $data_url_portfolio_category = $(this).data("url");
+
+    swal({
+        title: "Əminsiniz?",
+        text: "Silinən məlumatlar geri qaytarılmayacaq!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = $data_url_portfolio_category;
+            }
+        });
+});
+
+
+
 //editoru initialize etmek ucun kod
 if (CKEDITOR.replace( 'editor1', {})){
     CKEDITOR.replace( 'editor1', {});
@@ -68,6 +90,7 @@ if (CKEDITOR.replace( 'editor1', {})){
 var name = "dropzone";
 if($("#" + name).length != 0) {
     var myDropzone = new Dropzone("#dropzone");
+
     myDropzone.on("complete", function(file) {
         $data_url_of_dropzone = $('#dropzone').data("url");
 
@@ -363,3 +386,129 @@ $('#c_filter').on('change', function() {
     });
 
 });
+
+
+
+
+// content editable ile dinamik update
+$('.c_update_spinner').hide();
+var old_value;
+$(".c_editable_text").click(function () {
+    old_value = $(this).html();
+});
+$(".c_editable_text").on("blur", function () {
+
+    if (old_value != $(this).html() && $(this).html() != ""){
+        $.ajax({
+            type: "POST",
+            url: $(this).data("url"),
+            data: {my_data: $(this).html(), my_data2: $(this).data("name")},
+
+            beforeSend: function() {
+                $('.c_update_spinner').show();
+            },
+
+            complete: function() {
+                $('.c_update_spinner').hide();
+            },
+
+            success: function(data) {
+
+            },
+            error: function() {
+                alert('Xəta baş verdi');
+            }
+        });
+    }else{
+        $(this).html(old_value);
+    }
+});
+$('.c_editable_text').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $(".c_editable_text").blur();
+        $.ajax({
+            type: "POST",
+            url: $(this).data("url"),
+            data: {my_data: $(this).html(), my_data2: $(this).data("name")},
+
+            beforeSend: function() {
+                $('.c_update_spinner').show();
+            },
+
+            complete: function() {
+                $('.c_update_spinner').hide();
+            },
+
+            success: function(data) {
+
+            },
+            error: function() {
+                alert('Xəta baş verdi');
+            }
+        });
+    }
+});
+
+
+// dinamik select tag
+$(".c_dinamic_select").on("click", function () {
+    $this_parent_of_select = $(this);
+    $(this).find("span").hide();
+    $(this).find(".c_dinamic_select_tag").show();
+
+    $(".c_dinamic_select_tag").on("change", function () {
+
+        $this = $(this);
+
+        $(this).parent().find("span").show();
+        $(this).hide();
+
+        $.ajax({
+            type: "POST",
+            url: $(this).data("url"),
+            data: {my_data: $(this).val()},
+
+            beforeSend: function() {
+                $('.c_update_spinner').show();
+            },
+
+            complete: function() {
+                $('.c_update_spinner').hide();
+            },
+
+            success: function(data) {
+                if (data != ""){
+                    $this.prev().html(data);
+                } else{
+                    $this.prev().html("Klası yoxdur");
+                }
+            },
+            error: function() {
+                alert('Xəta baş verdi');
+            }
+        });
+
+    });
+
+});
+
+
+// dinamik sekil update
+$(".c_input_file_img").on("click", function () {
+    $input_data_url = $(this).data("url");
+    $(this).prev().click();
+
+    $(this).prev().on("change", function () {
+
+        // alert($(this).parent().data("s"));
+
+        $(this).parent().submit(function (e) {
+            e.preventDefault();
+            alert("oldu")
+        })
+
+    })
+
+});
+
