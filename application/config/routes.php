@@ -487,14 +487,6 @@ $route['secure_admin_panel_car_model_update_ajax_img/(.*)'] = 'Panel_admin_page_
 //-------------------- Model hissesi -----------------------
 
 
-//-------------------- Masin hisseleri hissesi -----------------------
-$route['secure_admin_panel_car_parts'] = 'Panel_admin_page_car_parts/index';
-
-
-
-
-
-//-------------------- Masin hisseleri hissesi -----------------------
 
 
 

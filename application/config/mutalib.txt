@@ -13,3 +13,11 @@ $route['secure_admin_panel_about_ml'] = 'Panel_admin_page_about_ml/index';
 $route['secure_admin_panel_about_act_ml'] = 'Panel_admin_page_about_ml/update';
 
 //-------------------- ABOUT hissesi -----------------------
+
+
+//-------------------- Masin hisseleri hissesi -----------------------
+$route['secure_admin_panel_car_parts'] = 'Panel_admin_page_car_parts/index';
+
+
+
+//-------------------- Masin hisseleri hissesi -----------------------
